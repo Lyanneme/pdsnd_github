@@ -26,6 +26,7 @@ def get_filters():
         else:
             print("\n Ups there has been an error. Please enter one of the valid city names")    
 
+
     # get user input for month (january, february, ... , june or none)
     while True:
         months= ['January','February','March','April','June','May','None']
@@ -35,6 +36,7 @@ def get_filters():
             break
         else:
             print("\n Ups there has been an error. Please enter one of the valid month names")    
+
 
     # get user input for day of week (monday, tuesday, ... sunday or none)
     while True:
@@ -102,10 +104,12 @@ def time_stats(df,month,day):
         pop_month= months[pop_month-1]
         print("The most Popular month is",pop_month)
 
+
     # display the most common day of week
     if day =='None':
         popular_day= df['day_of_week'].mode()[0]
         print("The popular day is",popular_day)
+
 
     # display the most common start hour
     df['Start Hour'] = df['Start Time'].dt.hour
@@ -114,6 +118,7 @@ def time_stats(df,month,day):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 
 def station_stats(df):
@@ -163,6 +168,7 @@ def trip_duration_stats(df):
     print('-'*40)
 
 
+
 def user_stats(df,city):
     """Displays statistics on bikeshare users."""
 
@@ -190,6 +196,7 @@ def user_stats(df,city):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 def display_data(df):
 
