@@ -20,7 +20,7 @@ def get_filters():
     while True:
         cities= ['chicago','new york city','washington']
         city= input("\n Which city do you want to explore data from? (Chicago, New york city, Washington) \n").lower()
-        #error handling
+        #error handling for city
         if city in cities:
             break
         else:
@@ -30,7 +30,7 @@ def get_filters():
     while True:
         months= ['January','February','March','April','June','May','None']
         month = input("\n Which month do you want to explore data from? (January, February, March, April, May, June)? Type 'None' for no specific month\n").title()
-       # error handling
+       # error handling for month
         if month in months:
             break
         else:
@@ -40,7 +40,7 @@ def get_filters():
     while True:
         days= ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday','None']
         day = input("\n Which day of the week do you want to explore data for? (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)? Type 'None' for no specific day \n").title()         
-        #error handling
+        #error handling for day
         if day in days:
             break
         else:
