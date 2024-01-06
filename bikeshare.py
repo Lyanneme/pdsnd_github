@@ -76,16 +76,16 @@ def load_data(city, month, day):
 
     #4 Filtering if possible based on user selection
     if month != 'None':
-        # use the index of the months list to get the corresponding int
+        #5 use the index of the months list to get the corresponding int
         months = ['January', 'February', 'March', 'April', 'May', 'June']
         month = months.index(month)+1
     
-        # Establishement of the new dataframe
+        #6 Establishement of the new dataframe
         df = df[df['month']==month] 
 
-    # Filtering if possible based on user selection
+    #7 Filtering if possible based on user selection
     if day != 'None':
-        # Establishment of the new dataframe
+        #8 Establishment of the new dataframe
         df = df[df['day_of_week']==day]
 
     return df
